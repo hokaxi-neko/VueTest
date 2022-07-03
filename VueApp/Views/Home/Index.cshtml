@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Scripts
+{
+    <script>    
+        let app = Vue.createApp({
+            data: function() {
+                return {
+                    hello: "12132"
+                }
+            },
+            methods:{
+                clickMe(){
+                    console.log("aaa");
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+    <div id="app">
+        {{hello}}
+        <button v-on:click="clickMe" type="button" class="btn btn-primary">Primary</button>
+    </div>
+
